@@ -1,0 +1,32 @@
+<div class="home">
+
+  <div class="home_navbar">
+
+    <img src="../../../assets/Images/General/Logo de acme.png" alt="Logo de acme">
+    <app-navbar [items]="items" (linkEmitter)="redirectToLink($event)"></app-navbar>
+    <button>Reserva ya</button>
+
+  </div>
+
+  <div class="home_information">
+
+    <h2>
+      Obtén servicios<br>
+      especializados de<br>
+      <span>fisioterapia</span>
+    </h2>
+
+    <p>
+      Tenemos a los mejores profesionales<br>
+      de la region dispuestos a darte un<br>
+      servicio de <span>calidad</span> y <span>progreso</span><br>
+      continuo
+    </p>
+
+    <button class="home_information_reserve">Reserva ya</button>
+
+    <button class="home_information_sendmail">Envia un correo</button>
+
+  </div>
+
+</div>

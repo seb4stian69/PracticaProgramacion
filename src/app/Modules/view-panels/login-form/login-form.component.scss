@@ -1,0 +1,119 @@
+// +----------------------------+ | Imports | +----------------------------+ //
+@use "../../../Common/Styles/colors";
+@use "../../../Common/Styles/functions";
+// +----------------------------+ | Mixins | +----------------------------+ //
+@use "../../../Common/Styles/mixins";
+
+// +----------------------------+ | Elements & Containers | +----------------------------+ //
+
+.form{
+
+  background-color: inherit;
+  margin-left: functions.pixels_to_em(90);
+
+  &_input {
+    width: 500px;
+    height: 50px;
+    left: 116px;
+    top: 283px;
+    border: 1px dashed colors.$gray;
+    border-radius: functions.pixels_to_em(9);
+    font-size: functions.pixels_to_em(17);
+    font-weight: 560;
+    padding-left: functions.pixels_to_em(20);
+    padding-right: functions.pixels_to_em(20);
+    margin-bottom: functions.pixels_to_em(-10);
+    margin-top: functions.pixels_to_em(30);
+  }
+
+  &_input::placeholder{
+    color: colors.$darkGray;
+  }
+
+  &_input:focus{
+    border: 1px dashed colors.$darkGray;
+    outline: none;
+  }
+
+  &_help{
+
+    display: flex;
+    flex-direction: row;
+    margin-top: functions.pixels_to_em(35);
+    align-items: center;
+    gap: functions.pixels_to_em(65);
+    margin-left: 12.5%;
+    color: colors.$darkGray;
+    font-weight: 650;
+    font-size: functions.pixels_to_em(17);
+
+    & input{
+      margin-right: functions.pixels_to_em(10);
+    }
+
+    & input:hover{
+      cursor: pointer;
+      color: colors.$whiteBlue;
+    }
+
+    & p:hover{
+      cursor: pointer;
+      color: colors.$whiteBlue;
+    }
+
+  }
+
+  &_actions{
+
+    display: flex;
+    flex-direction: row;
+    gap: functions.pixels_to_em(15);
+    margin-left: 5.5%;
+    margin-top: functions.pixels_to_em(30);
+
+    & button{
+      width: 219px;
+      height: 53px;
+      left: 149px;
+      top: 517px;
+      background: colors.$darkGray;
+      border-radius: 10px;
+      border: none;
+      font-size: large;
+      color: white;
+    }
+
+    & button:hover{
+      cursor: pointer;
+      color: #8a8a8a;
+    }
+
+    #form_actions_google{
+      background-image: url('../../../../assets/Images/General/ButtonGoogleLogo.png');
+      background-position: center;
+      background-size: 15%;
+      background-repeat: no-repeat;
+    }
+
+  }
+
+  &_p{
+
+    color: colors.$darkGray;
+    font-weight: 650;
+    margin-left: 18%;
+    margin-top: functions.pixels_to_em(30);
+
+    & span{
+      color: colors.$whiteBlue;
+    }
+    & span:hover{
+      border-bottom: 1px solid colors.$whiteBlue;
+      cursor:pointer;
+    }
+
+  }
+
+}
+
+

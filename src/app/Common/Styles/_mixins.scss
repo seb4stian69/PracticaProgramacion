@@ -1,0 +1,17 @@
+// +----------------------------+ | Imports | +----------------------------+ //
+@use "functions";
+@use "colors";
+
+// +----------------------------+ | Mixins | +----------------------------+ //
+@mixin buttonsHomeEditTemplate{
+  background-origin: inherit;
+  width: functions.pixels_to_em(223);
+  height: functions.pixels_to_em(55);
+  left: functions.pixels_to_em(1032);
+  top: functions.pixels_to_em(57);
+  color: colors.$whiteBlue;
+  font-size: functions.pixels_to_em(15);
+  border-radius: functions.pixels_to_em(4);
+  transition: color 0.1s linear 0.1s;
+}
+

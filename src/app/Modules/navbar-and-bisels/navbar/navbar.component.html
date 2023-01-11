@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <p
+    class="navbar_p"
+    [ngClass]=" (item.selected==true) ? 'navbar_p-selected':'none' "
+    *ngFor="let item of items"
+    (click)="sendLinkToParent(item.link)"
+    (click)="changeEmphasis(item)"
+  >
+    {{item.name}}
+</p>
+</nav>

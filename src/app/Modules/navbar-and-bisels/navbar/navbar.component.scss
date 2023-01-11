@@ -1,0 +1,33 @@
+
+@use '../../../Common/Styles/colors';
+@use '../../../Common/Styles/functions';
+
+.navbar{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  &_p{
+    text-decoration: none;
+    text-emphasis: none;
+    margin-left: functions.pixels_to_em(10);
+    margin-right: functions.pixels_to_em(10);
+    margin-top: functions.pixels_to_em(18);
+    color: colors.$gray;
+    font-weight: 700;
+    font-size: functions.pixels_to_em(24);
+  }
+
+  &_p:hover{
+    cursor: pointer;
+    color: colors.$darkGray;
+  }
+
+  &_p-selected{
+    border-bottom: functions.pixels_to_em(1.5) dashed colors.$gray;
+    color: colors.$darkGray;
+  }
+
+}
+

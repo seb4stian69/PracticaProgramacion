@@ -1,0 +1,18 @@
+<div class="form">
+
+  <input class="form_input" type="text" placeholder="Usuario">
+  <input class="form_input" type="password" placeholder="Contraseña">
+
+  <div class="form_help">
+    <div><input type="checkbox"><span>Recuerdame</span></div>
+    <p>¿Olvidaste tu contraseña?</p>
+  </div>
+
+  <div class="form_actions">
+    <button (click)="onPressLogin()" class="form_actions_mail">Inicia sesion</button>
+    <button (click)="onPressLoginWithGoogle()" id="form_actions_google"></button>
+  </div>
+
+  <p class="form_p">¿No tienes una cuenta? <span>¡Pide una!</span></p>
+
+</div>
