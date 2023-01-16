@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@use './app/Common/Styles/colors';
+
+*{
+  background-color: #F6F6F6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection{
+  background-color: colors.$whiteBlue;
+}

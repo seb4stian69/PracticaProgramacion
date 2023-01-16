@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+// + ---------------------------- + First level imports + ----------------------------- + //
+import { Component, Output, EventEmitter } from '@angular/core';
+import { FormGroup,FormControl } from '@angular/forms';
+// + ---------------------------- + Second level imports + ---------------------------- + //
+// + ---------------------------- + Thirds level imports + ---------------------------- + //
 
 @Component({
   selector: 'app-login-form',
@@ -7,12 +11,20 @@ import { Component } from '@angular/core';
 })
 export class LoginFormComponent {
 
-  onPressLogin():void{
-    alert("you tried to connect")
+  formInicial: FormGroup;
+  @Output() formEmmiter:EventEmitter<FormGroup> = new EventEmitter<FormGroup>();
+
+  constructor(){
+    this.formInicial = new FormGroup({
+      user: new FormControl(),
+      pass: new FormControl()
+    })
   }
 
+  onPressLogin():void{ this.formEmmiter.emit(this.formInicial) }
+
   onPressLoginWithGoogle():void{
-    alert("you tried to connect with google account")
+    alert('you tried to login with google')
   }
 
 }

@@ -4,7 +4,7 @@
 
     <img src="../../../assets/Images/General/Logo de acme.png" alt="Logo de acme">
     <app-navbar [items]="items" (linkEmitter)="redirectToLink($event)"></app-navbar>
-    <button>Reserva ya</button>
+    <button (click)="sendToLogin()">Reserva ya</button>
 
   </div>
 
@@ -23,7 +23,7 @@
       continuo
     </p>
 
-    <button class="home_information_reserve">Reserva ya</button>
+    <button class="home_information_reserve" (click)="sendToLogin()">Reserva ya</button>
 
     <button class="home_information_sendmail">Envia un correo</button>
 

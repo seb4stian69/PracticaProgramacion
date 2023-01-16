@@ -1,1 +1,27 @@
-<p>bisels works!</p>
+<div class="biselSecretaria">
+
+  <img src="../../../../assets/Images/General/Logo de acme.png" alt="logo de acme">
+  <app-navbar [styles_navbar]="styles_navbar" [styles_p]="styles_p" class="biselSecretaria_navbar" [items]="items" (linkEmitter)="redirectToLink($event)"></app-navbar>
+
+  <div class="biselSecretaria_user">
+
+    <div>
+      <div [ngClass]="(nowStatus)?'green':'red'" class="biselSecretaria_user_icon"></div>
+
+      <select (onChange)="changeStatus()">
+
+        <option value="Disponible">Disponible</option>
+        <option value="No disponible">No disponible</option>
+
+      </select>    </div>
+
+
+    <div class="biselSecretaria_user_Mark">
+      <div class="biselSecretaria_user_Mark_photo"></div>
+    </div>
+
+    <span>{{user.name}} {{user.lastname}}</span>
+
+  </div>
+
+</div>
